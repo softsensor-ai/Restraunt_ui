@@ -10,7 +10,7 @@ const Form = () => {
     const [restraunt_name,setRestraunt_name] = useState('')
     const [address,setAddress] = useState('')
 
-    const [flag,setFlag] = useState('') 
+    const [flag,setFlag] = useState(false) 
 
     const submitForm =  async (e) =>{
         const data = 
@@ -29,8 +29,8 @@ const Form = () => {
             'Content-Type': 'application/json'
             }
         })
-        .then(()=> {console.log("sent"); setFlag('true'); })
-        .catch(err => console.error(err))
+        .then(()=> {alert("Account created successfully! "); setFlag(true); })
+        .catch(err => {console.error(err); alert("Email already exist.")})
     }
     const resetForm = (e)=>{
         setFirstname('')
@@ -40,12 +40,13 @@ const Form = () => {
         setAddress('')
         setFlag('')
     }
+    console.log(flag)
     return (
         <>
         <form >
             <div className="home">
             <h1>Welcome User</h1>
-            <label>First Name</label><input type="text" autoFocus="true" value={firstname} onChange={e=>setFirstname(e.target.value)} placeholder="Enter first name" pattern="[A-Za-z]{4,10}" title="Shouldn't contain numbers and should be of minimum 4 letters" required/><br/>
+            <label>First Name</label><input type="text" autoFocus value={firstname} onChange={e=>setFirstname(e.target.value)} placeholder="Enter first name" pattern="[A-Za-z]{4,10}" title="Shouldn't contain numbers and should be of minimum 4 letters" required/><br/>
             <label>Last Name</label><input type="text" value={lastname} onChange={e=>setLastname(e.target.value)} placeholder="Enter last name" pattern="[A-Za-z]{4,10}" title="It should be alphabet only with minimum 3 letters" required/><br/>
             <label>Email</label><input type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="Enter email address" required/><br/>
             <label>Restraunt Name</label><input type="text" value={restraunt_name} onChange={e=>setRestraunt_name(e.target.value)} pattern="[A-Za-z]*" placeholder="Enter restraunt name" required/><br/>
