@@ -4,15 +4,19 @@ import Form from './components/Form'
 import Nearby from './components/Nearby'
 import Chart from './components/Chart'
 import Restraunt from './components/Restraunt'
+import RegistrationForm from './components/RegistrationForm'
+import Signin from './components/Signin'
 
 function App() {
   return (
     <>
+      {/* <Signin/> */}
       {/* <Form/> */}
-      {/* <Home name="dominos" address="new jersey"/> */}
       {/* <Nearby/> */}
+      {/* <Restraunt/> */}
+      <RegistrationForm/>
+      {/* <Home name="dominos" address="new jersey"/> */}
       {/* <Chart/> */}
-      <Restraunt/>
     </>
   );
 }
