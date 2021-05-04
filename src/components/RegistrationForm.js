@@ -73,7 +73,7 @@ const RegistrationForm = () => {
             <form className="Center">
             <div className="home">
             <h1>Welcome User</h1>
-            <label>First Name</label><input type="text" autoFocus value={firstname} onChange={e=>setFirstname(e.target.value)} placeholder="Enter first name" pattern="[A-Za-z]{4,10}" title="Shouldn't contain numbers and should be of minimum 4 letters" required/><br/>
+            <label>First Name</label><input type="text" autoFocus value={firstname} onChange={e=>setFirstname(e.target.value)}  placeholder="Enter first name" pattern="[A-Za-z]{4,10}" title="Shouldn't contain numbers and should be of minimum 4 letters" required/><br/>
             <label>Last Name</label><input type="text" value={lastname} onChange={e=>setLastname(e.target.value)} placeholder="Enter last name" pattern="[A-Za-z]{4,10}" title="It should be alphabet only with minimum 3 letters" required/><br/>
             <label>Password</label><input type="password" id="password1" value={password} onChange={e=>setPassword(e.target.value)} required placeholder="Enter password"></input><span>Show<input type="checkbox" onChange={checkme} id="togglePassword1"/></span> <br/>
             <label>Confirm password</label><input type="password" id="password2" value={confirmpassword} onChange={e=>setConfirmpassword(e.target.value)} required placeholder="Enter password again"></input><span>Show<input type="checkbox" onChange={checkme} id="togglePassword2"/> </span><br/>
