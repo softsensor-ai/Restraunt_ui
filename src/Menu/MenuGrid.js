@@ -10,6 +10,7 @@ import food8 from '../assets/img/costic/food-8.jpg'
 
 
 const MenuGrid = () => {
+    
     return (
             <div className="row">
                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">

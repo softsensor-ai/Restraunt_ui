@@ -30,11 +30,10 @@ function App() {
   
 
   return (
-    <>
     <BrowserRouter>
-    
     <Switch>
-      <Route path="/login" exact component={Signin}/>
+      {!localStorage.getItem('token')?
+      <Route path="/" exact component={Signin}/>:<>
       <Route path="/signup" exact component={Signup}/>
       <Route path="/lockscreen" exact component={Lockscreen}/>
     <div className="ms-body ms-aside-left-open ms-primary-theme ms-has-quickbar " id="main">
@@ -50,7 +49,7 @@ function App() {
         <Route path="/admin/setting" exact component={userProfile}/>
         <Route path="/admin/lockscreen" exact component={Lockscreen}/>
         <Route path='/admin/productView/:id' exact component={ProductDetail} />
-        <Route path="/admin/[A-Za-z]*" component={Error} />
+        {/* <Route path="/admin/[A-Za-z]*" component={Error} /> */}
     
 
   {/* <Order/> */}
@@ -70,10 +69,9 @@ function App() {
     </div>
     </main>
     <Rightnav/>
-    </div> 
+    </div>  </>}
     </Switch>
     </BrowserRouter>
-    </>
   );
 }
 

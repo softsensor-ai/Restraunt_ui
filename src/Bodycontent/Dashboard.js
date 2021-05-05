@@ -3,12 +3,15 @@ import Chart from '../components/Chart'
 
 
 
-const Bodycon = () => {
+const Bodycon = ({history}) => {
     const [value,setvalue] = useState('')
+    if(!localStorage.getItem('token')){
+        history.push('/')
+    }
     return (    
     <div className="row">
     <div className="col-md-12">
-        <h1 className="db-header-title">Welcome, Anny</h1>
+        <h1 className="db-header-title">Welcome, {localStorage.getItem('name')}</h1>
     </div>
     <div className="col-xl-3 col-lg-6 col-md-6">
         <div className="ms-card ms-widget has-graph-full-width ms-infographics-widget"><div className="chartjs-size-monitor" style={{position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none", visibility: "hidden", zIndex: -1}}><div className="chartjs-size-monitor-expand" style={{position:"absolute",left:0,top:0,right:0,bottom:0,overflow:"hidden",pointerEvents:"none",visibility:"hidden",zIndex:-1}}><div style={{position:"absolute",width:1000000,height:1000000,left:0,top:0}}></div></div><div className="chartjs-size-monitor-shrink" style={{position:"absolute",left:0,top:0,right:0,bottom:0,overflow:"hidden",pointerEvents:"none",visibility:"hidden",zIndex:-1}}><div style={{position:"absolute",width:"200%",height:"200%",left:0, top:0}}></div></div></div>

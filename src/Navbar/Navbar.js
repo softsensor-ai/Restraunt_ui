@@ -20,6 +20,9 @@ const Navbar = () => {
         }
         setflag(!flag);
     }
+    const logout = () =>{
+        localStorage.clear()
+    }
     const [initialnav, setinitialnav] = useState(true)
 
     // showing nav toggle profile and mail options
@@ -123,7 +126,7 @@ const Navbar = () => {
         </a>
         <ul className="dropdown-menu dropdown-menu-right user-dropdown" aria-labelledby="userDropdown">
             <li className="dropdown-menu-header">
-            <h6 className="dropdown-header ms-inline m-0"><span className="text-disabled">Welcome, Anny Farisha</span></h6>
+            <h6 className="dropdown-header ms-inline m-0"><span className="text-disabled">{localStorage.getItem('name')}</span></h6>
             </li>
             <li className="dropdown-divider"></li>
             <li className="ms-dropdown-list">
@@ -131,7 +134,7 @@ const Navbar = () => {
             </Link>
             <Link className="media fs-14 p-2" to="/admin/email"> <span><i className="flaticon-mail mr-2"></i> Inbox</span> <span className="badge badge-pill badge-info">3</span>
             </Link>
-            <Link className="media fs-14 p-2" href="/admin/setting"> <span><i className="flaticon-gear mr-2"></i> Account Settings</span>
+            <Link className="media fs-14 p-2" to="/admin/setting"> <span><i className="flaticon-gear mr-2"></i> Account Settings</span>
             </Link>
             </li>
             <li className="dropdown-divider"></li>
@@ -140,7 +143,7 @@ const Navbar = () => {
             </Link>
             </li>
             <li className="dropdown-menu-footer">
-            <Link className="media fs-14 p-2" to="/login"> <span><i className="flaticon-shut-down mr-2"></i> Logout</span>
+            <Link className="media fs-14 p-2" to="/" onClick={logout}> <span><i className="flaticon-shut-down mr-2"></i> Logout</span>
             </Link>
             </li>
         </ul>

@@ -25,11 +25,11 @@ const MenuList = () => {
                                 <table id="data-table-5" className="table w-100 thead-primary dataTable no-footer" role="grid" aria-describedby="data-table-5_info" style={{width: "1099px"}}>
                                     <thead>
                                         <tr role="row">
-                                            <th className="sorting_asc" tabindex="0" aria-controls="data-table-5" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Product ID: activate to sort column descending" style={{width: "165px"}}>Product ID</th>
-                                            <th className="sorting" tabindex="0" aria-controls="data-table-5" rowspan="1" colspan="1" aria-label="Product Name: activate to sort column ascending" style={{width: "325px"}}>Product Name</th>
-                                            <th className="sorting" tabindex="0" aria-controls="data-table-5" rowspan="1" colspan="1" aria-label="Quantity: activate to sort column ascending" style={{width: "141px"}}>Quantity</th>
-                                            <th className="sorting" tabindex="0" aria-controls="data-table-5" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style={{width: "156px"}}>Status</th>
-                                            <th className="sorting" tabindex="0" aria-controls="data-table-5" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending" style={{width: "102px"}}>Price</th>
+                                            <th className="sorting_asc" tabIndex="0" aria-controls="data-table-5" rowSpan="1" colSpan="1" aria-sort="ascending" aria-label="Product ID: activate to sort column descending" style={{width: "165px"}}>Product ID</th>
+                                            <th className="sorting" tabIndex="0" aria-controls="data-table-5" rowSpan="1" colSpan="1" aria-label="Product Name: activate to sort column ascending" style={{width: "325px"}}>Product Name</th>
+                                            <th className="sorting" tabIndex="0" aria-controls="data-table-5" rowSpan="1" colSpan="1" aria-label="Quantity: activate to sort column ascending" style={{width: "141px"}}>Quantity</th>
+                                            <th className="sorting" tabIndex="0" aria-controls="data-table-5" rowSpan="1" colSpan="1" aria-label="Status: activate to sort column ascending" style={{width: "156px"}}>Status</th>
+                                            <th className="sorting" tabIndex="0" aria-controls="data-table-5" rowSpan="1" colSpan="1" aria-label="Price: activate to sort column ascending" style={{width: "102px"}}>Price</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -51,9 +51,9 @@ const MenuList = () => {
                                 <div className="dataTables_info" id="data-table-5_info" role="status" aria-live="polite">Showing 1 to 10 of 36 entries</div></div>
                                     <div className="col-sm-12 col-md-7"><div className="dataTables_paginate paging_simple_numbers" id="data-table-5_paginate">
                                         <ul className="pagination has-gap">
-                                            <li className="paginate_button page-item previous disabled" id="data-table-5_previous"><a href="#" aria-controls="data-table-5" data-dt-idx="0" tabindex="0" className="page-link">Previous</a></li>
-                                            <li className="paginate_button page-item active"><a href="#" aria-controls="data-table-5" data-dt-idx="1" tabindex="0" className="page-link">1</a></li><li className="paginate_button page-item "><a href="#" aria-controls="data-table-5" data-dt-idx="2" tabindex="0" className="page-link">2</a></li>
-                                            <li className="paginate_button page-item "><a href="#" aria-controls="data-table-5" data-dt-idx="3" tabindex="0" className="page-link">3</a></li><li className="paginate_button page-item "><a href="#" aria-controls="data-table-5" data-dt-idx="4" tabindex="0" className="page-link">4</a></li><li className="paginate_button page-item next" id="data-table-5_next"><a href="#" aria-controls="data-table-5" data-dt-idx="5" tabindex="0" className="page-link">Next</a></li>
+                                            <li className="paginate_button page-item previous disabled" id="data-table-5_previous"><a href="#" aria-controls="data-table-5" data-dt-idx="0" tabIndex="0" className="page-link">Previous</a></li>
+                                            <li className="paginate_button page-item active"><a href="#" aria-controls="data-table-5" data-dt-idx="1" tabIndex="0" className="page-link">1</a></li><li className="paginate_button page-item "><a href="#" aria-controls="data-table-5" data-dt-idx="2" tabIndex="0" className="page-link">2</a></li>
+                                            <li className="paginate_button page-item "><a href="#" aria-controls="data-table-5" data-dt-idx="3" tabIndex="0" className="page-link">3</a></li><li className="paginate_button page-item "><a href="#" aria-controls="data-table-5" data-dt-idx="4" tabIndex="0" className="page-link">4</a></li><li className="paginate_button page-item next" id="data-table-5_next"><a href="#" aria-controls="data-table-5" data-dt-idx="5" tabIndex="0" className="page-link">Next</a></li>
                                         </ul>
                                     </div>
                                 </div>
