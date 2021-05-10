@@ -3,13 +3,14 @@ import pizza from "../assets/img/costic/pizza.jpg"
 import frenchfrie from "../assets/img/costic/french-fries.jpg"
 import cereal from "../assets/img/costic/cereals.jpg"
 import sandwich from "../assets/img/costic/egg-sandwich.jpg"
+import { Link } from 'react-router-dom'
 
 const RestrauntList = () => {
     return (
         <div className="col-md-12">
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb pl-0">
-              <li className="breadcrumb-item"><a href="#"><i className="material-icons">home</i> Home</a></li>
+              <li className="breadcrumb-item"><Link to="/admin"><i className="material-icons">home</i> Home</Link></li>
           <li className="breadcrumb-item active" aria-current="page">Restaurant List</li>
 
             </ol>

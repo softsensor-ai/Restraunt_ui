@@ -41,14 +41,20 @@ function App() {
     <main className="body-content">
     <Navbar/>
     <div className="ms-content-wrapper" id="showcomponent">
-        <Route path='/admin' exact component={Bodycon} />
+        <Route path='/admin/' exact component={Bodycon} />
         <Route path='/admin/menu' exact component={Menuitem} />
         <Route path='/admin/addproduct' exact component={AddProduct} />
-        <Route path="/admin/profile" exact component={userProfile}/>
-        <Route path="/admin/email" exact component={userProfile}/>
-        <Route path="/admin/setting" exact component={userProfile}/>
-        <Route path="/admin/lockscreen" exact component={Lockscreen}/>
+        <Route path='/admin/profile' exact component={userProfile}/>
+        <Route path='/admin/email' exact component={userProfile}/>
+        <Route path='/admin/setting' exact component={userProfile}/>
+        <Route path='/admin/lockscreen' exact component={Lockscreen}/>
+        <Route path='/admin/order' exact component={Order}/>
+        <Route path='/admin/restrauntlist' exact component={RestrauntList}/>
+        <Route path='/admin/invoicedetail' exact component={InvoiceDetail}/>
+        <Route path='/admin/invoicelist' exact component={InvoiceList}/>
+        <Route path='/admin/sales' exact component={Sales}/>
         <Route path='/admin/productView/:id' exact component={ProductDetail} />
+
         {/* <Route path="/admin/[A-Za-z]*" component={Error} /> */}
     
 

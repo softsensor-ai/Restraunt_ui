@@ -1,13 +1,49 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import {Link} from 'react-router-dom'
+import axios from 'axios'
+import Loader from '../UserData/Loader'
 
 const Order = () => {
+    const [orderdata,setorderdata]=useState([])
+    useEffect(async ()=>{
+      axios.get('/getorders')
+      .then(res=>{setorderdata(res.data)})
+      .catch(err=>console.error(err))
+    },[])
+
+    const excelDateToJSDate = (serial) => {
+      const utc_days = Math.floor(serial - 25569);
+      const utc_value = utc_days * 86400;
+      const date_info = new Date(utc_value * 1000);
+      const fractional_day = serial - Math.floor(serial) + 0.0000001;
+      let total_seconds = Math.floor(86400 * fractional_day);
+      const seconds = total_seconds % 60;
+    
+      total_seconds -= seconds;
+    
+      const hours = Math.floor(total_seconds / (60 * 60));
+      const minutes = Math.floor(total_seconds / 60) % 60;
+    
+      const date = new Date(
+        date_info.getFullYear(),
+        date_info.getMonth(),
+        date_info.getDate(),
+        hours,
+        minutes,
+        seconds
+      );
+      return ''+date.toString().slice(0,-30)+'';
+    }
+
+    
+
     return (
         <div className="row">
 
         <div className="col-md-12">
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb pl-0">
-              <li className="breadcrumb-item"><a href="#"><i className="material-icons">home</i> Home</a></li>
+              <li className="breadcrumb-item"><Link to="/admin"><i className="material-icons">home</i> Home</Link></li>
           <li className="breadcrumb-item active" aria-current="page">Orders</li>
 
             </ol>
@@ -68,6 +104,8 @@ const Order = () => {
               </div>
             </div>
           </div>
+
+          
           <div className="col-12">
             <div className="ms-panel">
               <div className="ms-panel-header">
@@ -80,106 +118,27 @@ const Order = () => {
                     <thead>
                       <tr>
                         <th scope="col">Order ID</th>
-                        <th scope="col">Order Name</th>
-                        <th scope="col">Customer Name</th>
-                        <th scope="col">Location</th>
+                        <th scope="col">Menu</th>
+                        <th scope="col">Biz Date</th>
+                        <th scope="col">Order type</th>
                           <th scope="col">Order Status</th>
-                            <th scope="col">Delivered Time</th>
                             <th scope="col">Price</th>
+                            <th scope="col">Total Amount</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>French Fries</td>
-                        <td> Jhon Leo</td>
-                          <td> New Town</td>
-                        <td><span className="badge badge-primary">Pending</span></td>
-                          <td>10:05</td>
-                            <td>$10</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                          <td>Mango Pie</td>
-                        <td>Kristien</td>
-                        <td> Old Town</td>
-                      <td><span className="badge badge-dark">Cancelled</span></td>
-                        <td>14:05</td>
-                          <td>$9</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                            <td>FrieD Egg Sandwich</td>
-                        <td>Jack Suit</td>
-                        <td> Oxford Street</td>
-                      <td><span className="badge badge-success">Delivered</span></td>
-                        <td>12:05</td>
-                          <td>$19</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>Lemon Yogurt Parfait</td>
-                        <td>Alesdro Guitto</td>
-                        <td>  Church hill</td>
-                          <td><span className="badge badge-success">Delivered</span></td>
-                        <td>12:05</td>
-                          <td>$18</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">5</th>
-                        <td>Spicy Grill Sandwich</td>
-                        <td>Jacob Sahwny</td>
-                        <td>  palace Road</td>
-                        <td><span className="badge badge-success">Delivered</span></td>
-                        <td>12:05</td>
-                          <td>$21</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">6</th>
-                        <td>Chicken  Sandwich</td>
-                        <td>Peter Gill</td>
-                        <td> Street 21</td>
-                       <td><span className="badge badge-primary">Pending</span></td>
-                        <td>12:05</td>
-                          <td>$15</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">7</th>
-                            <td> Sandwich</td>
-                        <td>Jack Suit</td>
-                        <td> 40, Street</td>
-                      <td><span className="badge badge-success">Delivered</span></td>
-                        <td>11:05</td>
-                          <td>$19</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">8</th>
-                            <td>Spaghetti</td>
-                        <td>Jack Suit</td>
-                        <td> Oxford Street</td>
-                      <td><span className="badge badge-success">Delivered</span></td>
-                        <td>12:05</td>
-                          <td>$19</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">9</th>
-                            <td>Fried Rice</td>
-                        <td>Jack Suit</td>
-                        <td> Hilltown Street</td>
-                      <td><span className="badge badge-success">Delivered</span></td>
-                        <td>12:05</td>
-                          <td>$19</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">10</th>
-                            <td>Noodels</td>
-                        <td>Jack Suit</td>
-                        <td> Oxford Street</td>
-                      <td><span className="badge badge-success">Delivered</span></td>
-                        <td>12:05</td>
-                          <td>$19</td>
-                      </tr>
+                      {(orderdata.length>0)?
+                      orderdata.map((data,index)=><tr>
+                        <th scope="row">{index+1}</th>
+                        <td>{data.menu}</td>
+                    <td>{excelDateToJSDate(data.bizDate)}</td>
+                    <td>{data.orderType}</td>
+                  <td><span className="badge badge-success">Delivered</span></td>
+                    <td>$ {data.subTotal}</td>
+                      <td>$ {data.amountPaid}</td>
+                  </tr> )
 
+                    :<Loader/>}
                     </tbody>
                   </table>
                 </div>

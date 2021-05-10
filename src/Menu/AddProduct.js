@@ -34,7 +34,7 @@ const AddProduct = () => {
             "Authorization":`Bearer ${localStorage.getItem('token')}`
             } }
         )
-        .then((res)=>console.log(res.status))
+        .then((res)=>{res.status==200?alert("Successfully added new product"):alert("Some error occured")})
         .catch(err=>console.log(err))
     } 
 

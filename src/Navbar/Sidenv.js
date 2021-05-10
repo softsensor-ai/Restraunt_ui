@@ -67,14 +67,14 @@ const Sidenv = () => {
         
         
         <li className="menu-item">
-            <a href="pages/orders.html"> <span><i className="fas fa-clipboard-list fs-16"></i>Orders</span>
-            </a>
+            <Link to="/admin/order"> <span><i className="fas fa-clipboard-list fs-16"></i>Orders</span>
+            </Link>
         </li>
         
         
         <li className="menu-item">
-            <a href="pages/restaurants.html"> <span><i className="fa fa-tasks fs-16"></i>Restaurants List</span>
-            </a>
+            <Link to="/admin/restrauntlist"> <span><i className="fa fa-tasks fs-16"></i>Restaurants List</span>
+            </Link>
         </li>
         
         
@@ -82,9 +82,9 @@ const Sidenv = () => {
             <a href="#" className="has-chevron" data-toggle="collapse" data-target="#invoice" aria-expanded="false" aria-controls="invoice"> <span><i className="fas fa-file-invoice fs-16"></i>Invoice </span>
             </a>
             <ul id="invoice" className="collapse" aria-labelledby="invoice" data-parent="#side-nav-accordion">
-            <li> <a href="pages/invoice/invoicedetail.html">Invoice Detail</a>
+            <li> <Link to="/admin/invoicedetail">Invoice Detail</Link>
             </li>
-            <li> <a href="pages/invoice/invoicelist.html">Invoice List</a>
+            <li> <Link to="/admin/invoicelist">Invoice List</Link>
             </li>
             </ul>
         </li>
@@ -105,8 +105,8 @@ const Sidenv = () => {
         
         
         <li className="menu-item">
-            <a href="pages/sales.html"> <span><i className="fa fa-briefcase fs-16"></i>Sales</span>
-            </a>
+            <Link to="/admin/sales"> <span><i className="fa fa-briefcase fs-16"></i>Sales</span>
+            </Link>
         </li>
         
         <li className="menu-item">

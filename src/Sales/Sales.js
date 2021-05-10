@@ -3,6 +3,7 @@ import pizza from "../assets/img/costic/pizza.jpg"
 import frenchfrie from "../assets/img/costic/french-fries.jpg"
 import cereal from "../assets/img/costic/cereals.jpg"
 import sandwich from "../assets/img/costic/egg-sandwich.jpg"
+import { Link } from 'react-router-dom'
 
 const Sales = () => {
     return (
@@ -11,7 +12,7 @@ const Sales = () => {
             <div class="col-md-12">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-0">
-                    <li class="breadcrumb-item"><a href="#"><i class="material-icons">home</i> Home</a></li>
+                    <li class="breadcrumb-item"><Link to="/admin"><i class="material-icons">home</i> Home</Link></li>
                     <li class="breadcrumb-item active" aria-current="page">Sales</li>
                 </ol>
             </nav>
