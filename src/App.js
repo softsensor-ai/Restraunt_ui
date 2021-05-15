@@ -1,4 +1,7 @@
+
+// import './bootstrap.min.css'
 import './index.css'
+
 import Navbar from './Navbar/Navbar'
 import Sidenav from './Navbar/Sidenv'
 import Bodycon from './Bodycontent/Dashboard'
@@ -25,6 +28,7 @@ import userProfile from './UserData/userProfile'
 import Signin from './UserData/Signin'
 import Signup from './UserData/Signup'
 import Lockscreen from './UserData/Lockscreen'
+
 
 function App() {
   
@@ -55,8 +59,6 @@ function App() {
         <Route path='/admin/sales' exact component={Sales}/>
         <Route path='/admin/productView/:id' exact component={ProductDetail} />
 
-        {/* <Route path="/admin/[A-Za-z]*" component={Error} /> */}
-    
 
   {/* <Order/> */}
 

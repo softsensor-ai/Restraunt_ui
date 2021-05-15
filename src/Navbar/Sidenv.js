@@ -5,10 +5,7 @@ import Menuitem from '../Menu/Menuitem'
 import { Link } from 'react-router-dom'
 const Sidenv = () => {
 
-    // const changeView = (e) =>{
-        
-    // }
-
+    
 
     return (
     <div>

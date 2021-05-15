@@ -546,8 +546,8 @@ a{
   font-size: 14px;
 }
 a:hover, a:active, a:focus {
-  color: #bc2634;
-  text-decoration: none;
+  color: #bc2634!important;
+  text-decoration: none!important;
 }
 code{
   padding: 5px;
@@ -2788,7 +2788,7 @@ input:checked + .ms-switch-slider.ms-switch-dark{
 .breadcrumb{
   align-items: center;
   border-radius: 0;
-  background-color: #f0f0fa;
+  background-color: #f0f0fa!important;
 }
 .breadcrumb.breadcrumb-arrow-sep .breadcrumb-item + .breadcrumb-item::before{
   content: '\e315';
@@ -2797,7 +2797,7 @@ input:checked + .ms-switch-slider.ms-switch-dark{
   font-style: normal;
 }
 .breadcrumb-dark{
-  background-color: #ff0018;
+  background-color: #ff0018!important;
 }
 .breadcrumb-dark a,
 .breadcrumb-dark .breadcrumb-item + .breadcrumb-item::before,
