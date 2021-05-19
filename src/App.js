@@ -35,16 +35,16 @@ function App() {
   return (
     <BrowserRouter>
     <Switch>
-      {!localStorage.getItem('token')?
+      {/* {!localStorage.getItem('token')?
       <Route path="/" exact component={Signin}/>:<>
       <Route path="/signup" exact component={Signup}/>
-      <Route path="/lockscreen" exact component={Lockscreen}/>
+      <Route path="/lockscreen" exact component={Lockscreen}/> */}
     <div className="ms-body ms-aside-left-open ms-primary-theme ms-has-quickbar " id="main">
     <Sidenav />
     <main className="body-content">
     <Navbar/>
     <div className="ms-content-wrapper" id="showcomponent">
-        <Route path='/admin/' exact component={Bodycon} />
+        <Route path='/admin' exact component={Bodycon} />
         <Route path='/admin/menu' exact component={Menuitem} />
         <Route path='/admin/addproduct' exact component={AddProduct} />
         <Route path='/admin/profile' exact component={userProfile}/>
@@ -76,7 +76,7 @@ function App() {
     </div>
     </main>
     <Rightnav/>
-    </div>  </>}
+    </div> 
     </Switch>
     </BrowserRouter>
   );

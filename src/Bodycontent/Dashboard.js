@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
 import Chart from '../components/Chart'
 
-
-
-const Bodycon = ({history}) => {
+const Bodycon = () => {
     const [value,setvalue] = useState('')
-    if(!localStorage.getItem('token')){
-        history.push('/')
-    }
     return (    
     <div className="row">
     <div className="col-md-12">

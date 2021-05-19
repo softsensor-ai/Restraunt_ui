@@ -6,11 +6,12 @@ import Loader from '../UserData/Loader'
 
 const Order = () => {
     const [orderdata,setorderdata] = useState([])
+    const [restrauntid,setRestrauntid] = useState('60a23bf8986531315c07ef03')
     const [prev,setprev] = useState(1)
     const [next,setnext]= useState(prev+1)
     const total_page = [2,3,4,5,6,7,8,9,10,11,12,13,14,15]
     useEffect(()=>{
-      axios.get(`/getorders?page=${parseInt(prev+1)}`,{headers: {
+      axios.get(`/getorders?restaurant_id=${restrauntid}&page=${parseInt(prev+1)}`,{headers: {
         'Content-Type': 'application/json'
         }})
       .then(res=>{setorderdata(res.data)})
@@ -21,32 +22,7 @@ const Order = () => {
       setprev(parseInt(e.target.text)-1)
       setnext(parseInt(e.target.text)+1)
     }
-    const excelDateToJSDate = (serial) => {
-      const utc_days = Math.floor(serial - 25569);
-      const utc_value = utc_days * 86400;
-      const date_info = new Date(utc_value * 1000);
-      const fractional_day = serial - Math.floor(serial) + 0.0000001;
-      let total_seconds = Math.floor(86400 * fractional_day);
-      const seconds = total_seconds % 60;
     
-      total_seconds -= seconds;
-    
-      const hours = Math.floor(total_seconds / (60 * 60));
-      const minutes = Math.floor(total_seconds / 60) % 60;
-    
-      const date = new Date(
-        date_info.getFullYear(),
-        date_info.getMonth(),
-        date_info.getDate(),
-        hours,
-        minutes,
-        seconds
-      );
-      return ''+date.toString().slice(0,-39)+'';
-    }
-
-    
-
     return (
         <div className="row">
 
@@ -138,7 +114,7 @@ const Order = () => {
                       orderdata.map((data,index)=><tr>
                         <th scope="row">{index+1}</th>
                         <td>{data.menu}</td>
-                    <td>{excelDateToJSDate(data.bizDate)}</td>
+                    <td>{data.bizDate.slice(0,10)}</td>
                     <td>{data.orderType}</td>
                   <td><span className="badge badge-success">Delivered</span></td>
                     <td>$ {data.subTotal}</td>
