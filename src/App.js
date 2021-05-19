@@ -31,7 +31,6 @@ import Lockscreen from './UserData/Lockscreen'
 
 
 function App() {
-  
 
   return (
     <BrowserRouter>
