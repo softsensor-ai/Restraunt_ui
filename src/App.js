@@ -28,6 +28,7 @@ import userProfile from './UserData/userProfile'
 import Signin from './UserData/Signin'
 import Signup from './UserData/Signup'
 import Lockscreen from './UserData/Lockscreen'
+import Competative_analysis from './competative/Competitive_analysis'
 
 
 function App() {
@@ -56,7 +57,10 @@ function App() {
         <Route path='/admin/invoicedetail' exact component={InvoiceDetail}/>
         <Route path='/admin/invoicelist' exact component={InvoiceList}/>
         <Route path='/admin/sales' exact component={Sales}/>
+        <Route path='/admin/cutomerlist' exact component={CustomerList}/>
+        <Route path='/admin/customerreview' exact component={CustomerReview}/>
         <Route path='/admin/productView/:id' exact component={ProductDetail} />
+        <Route path='/admin/competitive_analysis' exact component={Competative_analysis} />
 
 
   {/* <Order/> */}

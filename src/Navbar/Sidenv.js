@@ -44,6 +44,10 @@ const Sidenv = () => {
             </ul>
         </li>
         
+        <li className="menu-item">
+            <Link to="/admin/competitive_analysis"> <span><i className="fa fa-tasks fs-16"></i>Competitive analysis</span>
+            </Link>
+        </li>
         
         <li className="menu-item">
             <Link to="/admin/order"> <span><i className="fas fa-clipboard-list fs-16"></i>Orders</span>
@@ -73,11 +77,11 @@ const Sidenv = () => {
             <a href="#" className="has-chevron" data-toggle="collapse" data-target="#customer" aria-expanded="false" aria-controls="customer"> <span><i className="fas fa-user-friends fs-16"></i>Customers </span>
             </a>
             <ul id="customer" className="collapse" aria-labelledby="customer" data-parent="#side-nav-accordion">
-            <li> <a href="pages/customer/customersreview.html">Customers Review</a>
+            <li> <Link to="/admin/customerreview">Customers Review</Link>
             </li>
-            <li> <a href="pages/customer/customersreview.html">Customers List</a>
+            <li> <Link to="/admin/cutomerlist">Customers List</Link>
             </li>
-            <li> <a href="pages/customer/social.html">Social Activity</a>
+            <li> <Link to="pages/customer/social.html">Social Activity</Link>
             </li>
             </ul>
         </li>

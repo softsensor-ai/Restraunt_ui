@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Pagination = () => {
-    const total_page = [2,3,4,5]
+const Pagination = ({current_page, total_page}) => {
     const handleChange = (e) =>{
         (e.target.text)
     }
