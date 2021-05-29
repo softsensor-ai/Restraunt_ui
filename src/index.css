@@ -7387,7 +7387,7 @@ body:not(.ms-settings-open) .ms-settings-toggle:hover{
 }
 
 .ms-card.ms-widget{
-  border-radius: 0px;
+  border-radius: 5vh;
 }
 
 .ms-active-site,
