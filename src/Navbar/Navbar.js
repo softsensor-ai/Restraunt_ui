@@ -126,7 +126,7 @@ const Navbar = () => {
         </a>
         <ul className="dropdown-menu dropdown-menu-right user-dropdown" aria-labelledby="userDropdown">
             <li className="dropdown-menu-header">
-            <h6 className="dropdown-header ms-inline m-0"><span className="text-disabled">{localStorage.getItem('name')}</span></h6>
+            <h6 className="dropdown-header ms-inline m-0"><span className="text-disabled">Hey! Anne</span></h6>
             </li>
             <li className="dropdown-divider"></li>
             <li className="ms-dropdown-list">

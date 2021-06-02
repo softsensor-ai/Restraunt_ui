@@ -1,6 +1,6 @@
 import React from 'react'
 import { Bar,Line } from 'react-chartjs-2'
-const Chart = ({data_1,data_2,labels}) => {
+const TimingChart = ({data_1,data_2,labels}) => {
     return (
         <>
             <Line  
@@ -23,6 +23,7 @@ const Chart = ({data_1,data_2,labels}) => {
         ]
             }}
             options={{ 
+                maintainAspectRatio: false,
                 legend: { display: false },
                 title: {
                     display: false,
@@ -110,4 +111,5 @@ const Chart = ({data_1,data_2,labels}) => {
     )
 }
 
-export default Chart
+export default TimingChart
+

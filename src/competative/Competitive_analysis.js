@@ -11,8 +11,13 @@ const Competative_analysis = () => {
 
     const [del_value,setDel_value]=useState('7')
     const [del_value_sale,setDel_value_sale]=useState('7')
+    const endDate = (value) => {
+        
+
+    }
     const findRestraunt = (e) =>{
-        axios.get(`/competitor_analysis/find_nearby_orders?zip=${zip_code}&start_date=2021-03-01&end_date=2021-03-10`)
+
+        axios.get(`/competitor_analysis/find_nearby_orders?zip=${zip_code}&start_date=2021-03-01&end_date=2021-04-10`)
         .then((res)=>{
             console.log(res.data)
             if(res.status==200){

@@ -37,6 +37,7 @@ const BarChart = ({className}) => {
         ],
             }}
             options={{
+                indexAxis: 'y',
                 yAxes:[{
                     yAxes:[{
                         ticks:{min:2}
