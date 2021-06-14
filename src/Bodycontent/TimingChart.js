@@ -1,6 +1,6 @@
 import React from 'react'
 import { Bar,Line } from 'react-chartjs-2'
-const TimingChart = ({data_1,data_2,labels}) => {
+const TimingChart = ({data_1,data_2,labels,label1,label2}) => {
     return (
         <>
             <Line  
@@ -8,14 +8,14 @@ const TimingChart = ({data_1,data_2,labels}) => {
                 labels,
         datasets: [
             {
-                label: 'Repeat order',
+                label:label1,
                 data: data_1,
                 backgroundColor: '#87ceeb',
                 borderColor: '#87ceeb',
                 borderWidth: 1
             },
             {
-                label: 'New order',
+                label: label2,
                 data: data_2,
                 backgroundColor: 'orange',
                 borderColor: 'orange',

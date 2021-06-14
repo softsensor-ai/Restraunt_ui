@@ -26,6 +26,8 @@ const Bodycon = () => {
     const [cancelOrder,setCancelOrder]=useState("221")
     const [repeatOrder,setRepeatOrder]=useState("5,670")
 
+    const [todayEarning,setTodayEarning]=useState("28,033")
+    const [yesterdayEarning,setYesterdayEarning]=useState("25,039")
 
     const changeRestraunt = (e) => {
         setRestrauntName(e.target.value)
@@ -35,24 +37,32 @@ const Bodycon = () => {
                     setTotalVisitor("12,973")
                     setNewUser("18,333")
                     setTotalOrders("148,973")
+                    setTodayEarning("28,033")
+                    setYesterdayEarning("25,039")
                     break;
             case '2': 
                     setSellsgraph("8,451")
                     setTotalVisitor("3,973")
                     setNewUser("7,333")
                     setTotalOrders("48,973")
+                    setTodayEarning("8,033")
+                    setYesterdayEarning("7,039")
                     break;
             case '3':
                     setSellsgraph("9,451")
                     setTotalVisitor("4,973")
                     setNewUser("6,383")
                     setTotalOrders("58,903")
+                    setTodayEarning("9,033")
+                    setYesterdayEarning("10,039")
                     break;
             case '4':
                     setSellsgraph("7,421")
                     setTotalVisitor("3,623")
                     setNewUser("5,323")
                     setTotalOrders("53,903")
+                    setTodayEarning("10,033")
+                    setYesterdayEarning("8,039")
                     break;
         }   
     }
@@ -138,13 +148,13 @@ const Bodycon = () => {
         <div className="ms-panel-body p-0">
             <div className="ms-quick-stats">
             <div className="ms-stats-grid">
-                <i className="fa fa-star"></i>
-                <p className="ms-text-dark">$8,033</p>
+                <i className="material-icons">attach_money</i>
+                <p className="ms-text-dark">${" "+todayEarning}</p>
                 <span>Today</span>
             </div>
             <div className="ms-stats-grid">
-                <i className="fa fa-university"></i>
-                <p className="ms-text-dark">$3,039</p>
+            <i className="material-icons">attach_money</i>
+                <p className="ms-text-dark">${" "+yesterdayEarning}</p>
                 <span>Yesterday</span>
             </div>
             </div>
@@ -250,7 +260,7 @@ const Bodycon = () => {
             </div>
             
             <div id="youtube-subscribers" maxWidth="758" maxeight="378" style={{display: "block", height: "50vh", width: "auto"}} className="chartjs-render-monitor" >
-                <TimingChart className="constainer" heading={head_data} data_1={chartdata1} style={{height:"auto"}} data_2={chartdata2} labels={chartlabel} />
+                <TimingChart className="container" heading={head_data} data_1={chartdata1} style={{height:"auto"}} data_2={chartdata2} labels={chartlabel} label1={'Repeat order'} label2={'New order'} />
             </div>
         </div>
         </div>

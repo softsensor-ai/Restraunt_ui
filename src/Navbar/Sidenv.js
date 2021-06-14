@@ -45,7 +45,11 @@ const Sidenv = () => {
         </li>
         
         <li className="menu-item">
-            <Link to="/admin/competitive_analysis"> <span><i className="fa fa-map-marker fs-16"></i>Geographical analysis</span>
+            <Link to="/admin/zipcode_analysis"> <span><i className="fa fa-map-marker fs-16"></i>Geographical analysis</span>
+            </Link>
+        </li>
+        <li className="menu-item">
+            <Link to="/admin/competitive_analysis"> <span><i className="fab fa-wpexplorer fs-16"></i>Competative analysis</span>
             </Link>
         </li>
         

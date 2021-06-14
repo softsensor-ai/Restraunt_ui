@@ -21,14 +21,16 @@ import Sales from './Sales/Sales'
 import CustomerReview from './Cutomer/CustomerReview'
 import CustomerList from './Cutomer/CustomerList'
 import Menuitem from './Menu/Menuitem'
-import { useState } from 'react'
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'
 import Error from '../src/Error/Error'
 import userProfile from './UserData/userProfile'
 import Signin from './UserData/Signin'
 import Signup from './UserData/Signup'
 import Lockscreen from './UserData/Lockscreen'
-import Competative_analysis from './competative/Competitive_analysis'
+import Zipcode_analysis from './Zipcode_analysis/Zipcode_analysis'
+import Restraunt from './components/Restraunt'
+import Competitive_analysis from './Competitive_analysis/Competitive_analysis'
+
 
 
 function App() {
@@ -45,7 +47,9 @@ function App() {
     <main className="body-content">
     <Navbar/>
     <div className="ms-content-wrapper" id="showcomponent">
+        
         <Route path='/admin' exact component={Bodycon} />
+        <Route path="/admin/zipcode_analysis" exact component={Zipcode_analysis} />
         <Route path='/admin/menu' exact component={Menuitem} />
         <Route path='/admin/addproduct' exact component={AddProduct} />
         <Route path='/admin/profile' exact component={userProfile}/>
@@ -60,7 +64,7 @@ function App() {
         <Route path='/admin/cutomerlist' exact component={CustomerList}/>
         <Route path='/admin/customerreview' exact component={CustomerReview}/>
         <Route path='/admin/productView/:id' exact component={ProductDetail} />
-        <Route path='/admin/competitive_analysis' exact component={Competative_analysis} />
+        <Route path='/admin/competitive_analysis' exact component={Competitive_analysis} />
 
 
   {/* <Order/> */}
